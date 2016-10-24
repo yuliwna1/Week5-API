@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Discover the city</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://use.fontawesome.com/f118378d6b.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Arimo:400,700,700i|Fjalla+One|Roboto+Slab:400,700" rel="stylesheet">
+</head>
+<body>
+	<main class="main">
+		<section class = "get_info">
+			<div class="wrapper">
+				<h1>Explore your city!</h1>
+				<p class="text">Simply use your Postal Code to discover historical places around.</p>
+				<form action="">
+					<input type="search" id="search">
+					<input type="submit" value="Find" id = "submit">
+				</form>
+				<p class="header_second">Or detect your</p>
+				
+					<input type="submit" value="Current location" id="submitSecond">
+				
+			</div>
+
+			<div id="map" class="map">
+				
+				    <div id="infobox">
+				     
+				    </div>
+				
+			</div>
+		</section>
+
+	</main>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4Io_IKd_gA4qaUILPJPZY4pawajQ97Kc"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
