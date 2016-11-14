@@ -7,7 +7,7 @@ var mainInfo = {
 
 mainInfo.getData = function(postalCodeIn, latIn, lngIn) {
 	$.ajax({
-		url: 'https://api.geonames.org/findNearbyWikipediaJSON',
+		url: 'http://api.geonames.org/findNearbyWikipediaJSON',
 		method: 'GET',
 		type: 'json',
 		data: {
