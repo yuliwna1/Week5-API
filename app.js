@@ -7,11 +7,11 @@ var mainInfo = {
 
 mainInfo.getData = function(postalCodeIn, latIn, lngIn) {
 	$.ajax({
-		url: 'http://api.geonames.org/findNearbyWikipediaJSON',
+		url: 'https://proxy.hackeryou.com',
 		method: 'GET',
 		type: 'json',
 		data: {
-			reqUrl: 'https://proxy.hackeryou.com',
+			reqUrl: 'http://api.geonames.org/findNearbyWikipediaJSON',
 			params: {
 				username: 'yuliwna1',
 				lat: latIn,
