@@ -11,10 +11,13 @@ mainInfo.getData = function(postalCodeIn, latIn, lngIn) {
 		method: 'GET',
 		type: 'json',
 		data: {
-			username: 'yuliwna1',
-			lat: latIn,
-			lng: lngIn,
-			type: 'json'
+			reqUrl: 'https://proxy.hackeryou.com',
+			params: {
+				username: 'yuliwna1',
+				lat: latIn,
+				lng: lngIn,
+				type: 'json'
+			}
 		}
 	}).then(function(dataResult) {
 		console.log(dataResult);
