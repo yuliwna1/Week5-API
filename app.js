@@ -32,6 +32,7 @@ mainInfo.getData = function(postalCodeIn, latIn, lngIn) {
 //Here I generate my google map
 
 mainInfo.initMap = function() {
+
 	mainInfo.geocoder = new google.maps.Geocoder();
 	mainInfo.map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 9,
@@ -99,7 +100,6 @@ mainInfo.stylePage();
 mainInfo.init = function() {
 	$('form').on('submit', function(e) {
 		e.preventDefault();
-		
 		//User's postal code goes to the var postalCode
 		var postalCode = $('input[type=search]').val();
 		console.log(postalCode);
@@ -120,6 +120,7 @@ mainInfo.init = function() {
 
 	$('#submitSecond').on('click', function(e) {
 		e.preventDefault();
+		$('.preloader').show();
 
 		if (navigator.geolocation) {
 
@@ -127,9 +128,11 @@ mainInfo.init = function() {
 		        	mainInfo.getData('Your Location', position.coords.latitude, position.coords.longitude);
 
 		        }, function() {
+		        	$('.preloader').hide();
 		        	alert('Sorry, we could not detect your location!');
 		        });
 		    } else {
+		    	$('.preloader').hide();
 		        alert('Geolocation is not supported by this browser.');
 		    }
 	
