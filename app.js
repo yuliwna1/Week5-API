@@ -6,6 +6,7 @@ var mainInfo = {
 //request data from geonames API
 
 mainInfo.getData = function(postalCodeIn, latIn, lngIn) {
+	$('.preloader').show();
 	$.ajax({
 		url: 'https://proxy.hackeryou.com',
 		method: 'GET',
@@ -20,6 +21,7 @@ mainInfo.getData = function(postalCodeIn, latIn, lngIn) {
 			}
 		}
 	}).then(function(dataResult) {
+		$('.preloader').hide();
 		console.log(dataResult);
 		console.log(latIn + ", " + lngIn);
 		mainInfo.updateMap(postalCodeIn, latIn, lngIn, dataResult.geonames);
