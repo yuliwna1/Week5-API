@@ -69,7 +69,7 @@ mainInfo.updateMap = function(postalCode, latIn, lngIn, geonames) {
 		var markerGeonames = new google.maps.Marker({
 	    	map: mainInfo.map,
 	        position: {lat: geonames[i].lat, lng: geonames[i].lng},
-	        icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+	        icon: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png',
 	        title: geonames[i].title,
 	        summary: geonames[i].summary,
 	        wikipediaUrl: geonames[i].wikipediaUrl
